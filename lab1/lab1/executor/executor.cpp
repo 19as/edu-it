@@ -3,7 +3,7 @@
 
 void main()
 {
-    MATRIX<int> M(2, 3);
+    MATRIX M(2, 3);
 
     int i, j;
     for (i = 0; i < 2; i++)
@@ -12,24 +12,24 @@ void main()
 
     M.Print("A");
     
-    MATRIX<int> T;
+    MATRIX T;
     T = M.transpose();
 
     T.Print("A^T");
 
-    MATRIX<int> C;
+    MATRIX C;
 
     C = M.multiply(T);
     C.Print("C=A*A^T");
 
-    MATRIX<int> C1;
+    MATRIX C1;
 
     C1 = M.sum(M);
     C1.Print("C=A+A");
 
 
-    MATRIX<int> C2;
+    MATRIX C2;
 
-    C2 = M.multiply<int>(2);
+    C2 = M.multiply(2);
     C2.Print("C=A*2");
 }
